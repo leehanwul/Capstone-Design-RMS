@@ -17,7 +17,7 @@ int echoPin4 = 32;//초음파4
 int trigPin4 = 33;//초음파4
 int echoPin5 = 34;//초음파5
 int trigPin5 = 35;//초음파5
-int relay = 10;// 릴레이
+int relay = 10;//릴레이
 int water_pin = A0;      //수분수위센서 A0에 연결
 int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
 
@@ -26,8 +26,14 @@ void setup() {
   // trig를 출력모드로 설정, echo를 입력모드로 설정
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
-  //pinMode(trigPin2, OUTPUT);
-  //pinMode(echoPin2, INPUT);
+  pinMode(trigPin2, OUTPUT);
+  pinMode(echoPin2, INPUT);
+  pinMode(trigPin3, OUTPUT);
+  pinMode(echoPin3, INPUT);
+  pinMode(trigPin4, OUTPUT);
+  pinMode(echoPin4, INPUT);
+  pinMode(trigPin5, OUTPUT);
+  pinMode(echoPin5, INPUT);
   pinMode(relay,OUTPUT);
   pinMode( A0,  INPUT); // A0핀을 입력으로 설정
   Serial.println("PHPoC TCP Client test");
@@ -56,36 +62,42 @@ void loop() {
   distance2 = ((float)(340 * duration2) / 10000) / 2;
 
   // 초음파를 보낸다. 다 보내면 echo가 HIGH 상태로 대기하게 된다.-3
-  digitalWrite(trigPin2, HIGH);
+  digitalWrite(trigPin3, HIGH);
   delay(10);
-  digitalWrite(trigPin2, LOW);
+  digitalWrite(trigPin3, LOW);
   // echoPin 이 HIGH를 유지한 시간을 저장 한다.
-  duration2 = pulseIn(echoPin2, HIGH);
+  duration3 = pulseIn(echoPin3, HIGH);
   // HIGH 였을 때 시간(초음파가 보냈다가 다시 들어온 시간)을 가지고 거리를 계산 한다.
-  distance2 = ((float)(340 * duration2) / 10000) / 2;
+  distance3 = ((float)(340 * duration3) / 10000) / 2;
 
   // 초음파를 보낸다. 다 보내면 echo가 HIGH 상태로 대기하게 된다.-4
-  digitalWrite(trigPin2, HIGH);
+  digitalWrite(trigPin4, HIGH);
   delay(10);
-  digitalWrite(trigPin2, LOW);
+  digitalWrite(trigPin4, LOW);
   // echoPin 이 HIGH를 유지한 시간을 저장 한다.
-  duration2 = pulseIn(echoPin2, HIGH); 
+  duration4 = pulseIn(echoPin4, HIGH); 
   // HIGH 였을 때 시간(초음파가 보냈다가 다시 들어온 시간)을 가지고 거리를 계산 한다.
-  distance2 = ((float)(340 * duration2) / 10000) / 2;  
+  distance4 = ((float)(340 * duration4) / 10000) / 2;  
 
   // 초음파를 보낸다. 다 보내면 echo가 HIGH 상태로 대기하게 된다.-5
-  digitalWrite(trigPin2, HIGH);
+  digitalWrite(trigPin5, HIGH);
   delay(10);
-  digitalWrite(trigPin2, LOW);
+  digitalWrite(trigPin5, LOW);
   // echoPin 이 HIGH를 유지한 시간을 저장 한다.
-  duration2 = pulseIn(echoPin2, HIGH); 
+  duration5 = pulseIn(echoPin5, HIGH); 
   // HIGH 였을 때 시간(초음파가 보냈다가 다시 들어온 시간)을 가지고 거리를 계산 한다.
-  distance2 = ((float)(340 * duration2) / 10000) / 2;  
+  distance5 = ((float)(340 * duration5) / 10000) / 2;  
   
-  Serial.print(distance);
+  Serial.print(ultrasonic1 : distance);
   Serial.println("cm");
-  //Serial.print(distance2);
-  //Serial.println("cm");
+  Serial.print(ultrasonic2 : distance2);
+  Serial.println("cm");
+  Serial.print(ultrasonic3 : distance3);
+  Serial.println("cm");
+  Serial.print(ultrasonic4 : distance4);
+  Serial.println("cm");
+  Serial.print(ultrasonic5 : distance5);
+  Serial.println("cm");
   
   Serial.println(analogRead(A0));  // Serial monitor로 A0값을 보여줌
   delay(100);                       // 입력값을 보여주는데 0.1초 설정
