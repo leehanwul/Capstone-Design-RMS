@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jinwoo.afinal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.example.jinwoo.afinal"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.jinwoo.afinal.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.example.jinwoo.afinal.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.example.jinwoo.afinal.RegistrationIntentService"
+            android:exported="false"></service>
+
+
+        <activity android:name=".ApplyActivity" />
+        <activity android:name=".SelectBuildingActivity" />
+        <activity android:name=".SelectFloorActivity" />
+        <activity android:name=".PaldarF1Activity"/>
+        <activity android:name=".PaldarF2Activity"/>
+        <activity android:name=".PaldarF3Activity"/>
+        <activity android:name=".PaldarF4Activity"/>
+        <activity android:name=".JonghabF1Activity"/>
+        <activity android:name=".JonghabF2Activity"/>
+        <activity android:name=".JonghabF3Activity"/>
+        <activity android:name=".JonghabF4Activity"/>
+        <activity android:name=".Pal_SelectFloorActivity"/>
+        <activity android:name=".Jong_SelectFloorActivity"/>
+        <activity android:name=".ManagerActivity"/>
+
+    </application>
+
+</manifest>

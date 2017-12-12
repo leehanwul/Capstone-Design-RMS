@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jinwoo.afinal.SelectBuildingActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/building" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:drawableEnd="@drawable/manager" />
+
+        <Button
+            android:id="@+id/paldalbtn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/sinhakbtn"
+            android:layout_alignStart="@+id/sinhakbtn"
+            android:layout_alignTop="@+id/jonghapbtn"
+            android:onClick="goSelectFloor"
+            android:text="팔달관" />
+
+        <Button
+            android:id="@+id/jonghapbtn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="177dp"
+            android:layout_marginEnd="45dp"
+            android:text="종합관" />
+
+        <Button
+            android:id="@+id/sinhakbtn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/paldalbtn"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="28dp"
+            android:text="신학생회관" />
+
+        <Button
+            android:id="@+id/yulgokbtn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/jonghapbtn"
+            android:layout_alignStart="@+id/jonghapbtn"
+            android:layout_alignTop="@+id/sinhakbtn"
+            android:text="율곡관" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

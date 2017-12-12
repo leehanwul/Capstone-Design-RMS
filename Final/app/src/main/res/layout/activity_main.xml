@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jinwoo.afinal.MainActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="174dp"
+            app:srcCompat="@drawable/main_back" />
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="156dp"
+            android:layout_marginStart="58dp"
+            android:hint="id"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/login_id"
+            android:layout_alignTop="@+id/login_id"
+            android:layout_marginTop="57dp"
+            android:password="true"
+            android:hint="password"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/login_password"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/login_id"
+            android:layout_weight="1"
+            android:onClick="goSelectBuilding"
+            android:text="로그인"
+            tools:layout_editor_absoluteX="265dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/applybtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/login_password"
+            android:layout_below="@+id/login_password"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:onClick="goApply"
+            android:text="회원가입"
+            tools:layout_editor_absoluteX="265dp"
+            tools:layout_editor_absoluteY="197dp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

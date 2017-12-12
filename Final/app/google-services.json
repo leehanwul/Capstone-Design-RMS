@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "290863150660",
+    "project_id": "final-48dd6"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290863150660:android:841c602f2f39427c",
+        "android_client_info": {
+          "package_name": "com.example.jinwoo.afinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290863150660-di62sqummfmhvofv2foso3qnlbpl9tfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCulSpqzAvyhYy8W5YNRODM1jqelVU9qTE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

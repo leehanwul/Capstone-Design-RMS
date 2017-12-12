@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jinwoo.afinal.ApplyActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/apply_id"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="ID"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="78dp" />
+
+            <EditText
+                android:id="@+id/apply_password"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Password"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="161dp" />
+
+            <EditText
+                android:id="@+id/apply_name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Name"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="249dp" />
+
+            <Button
+                android:id="@+id/okbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goMain1"
+                android:text="확인"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="379dp" />
+
+            <Button
+                android:id="@+id/nobtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goMain2"
+                android:text="취소"
+                tools:layout_editor_absoluteX="241dp"
+                tools:layout_editor_absoluteY="379dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/apply" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
