@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -28,10 +29,10 @@ import java.net.URL;
 
 public class Pal_SelectFloorActivity extends AppCompatActivity {
 
-    Button floor_1;
-    Button floor_2;
-    Button floor_3;
-    Button floor_4;
+    ImageButton floor_1;
+    ImageButton floor_2;
+    ImageButton floor_3;
+    ImageButton floor_4;
     int flag_1;
     int flag_2;
     int flag_3;
@@ -44,10 +45,10 @@ public class Pal_SelectFloorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_floor);
-        floor_1 = (Button) findViewById(R.id.floor_1);
-        floor_2 = (Button) findViewById(R.id.floor_2);
-        floor_3 = (Button) findViewById(R.id.floor_3);
-        floor_4 = (Button) findViewById(R.id.floor_4);
+        floor_1 = (ImageButton) findViewById(R.id.floor_1);
+        floor_2 = (ImageButton) findViewById(R.id.floor_2);
+        floor_3 = (ImageButton) findViewById(R.id.floor_3);
+        floor_4 = (ImageButton) findViewById(R.id.floor_4);
 
         floor_1.setOnClickListener(new View.OnClickListener(){
             @Override

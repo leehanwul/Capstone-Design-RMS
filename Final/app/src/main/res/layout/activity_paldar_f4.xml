@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinwoo.afinal.PaldarF1Activity"
+    tools:context="com.example.jinwoo.afinal.PaldarF4Activity"
     android:background="@drawable/background">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,5 +104,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

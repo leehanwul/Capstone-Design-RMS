@@ -7,65 +7,79 @@
     tools:context="com.example.jinwoo.afinal.SelectBuildingActivity"
     android:background="@drawable/background">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/building" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="105dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:drawableEnd="@drawable/manager" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/building" />
 
-        <Button
-            android:id="@+id/paldalbtn"
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:layout_alignLeft="@+id/sinhakbtn"
-            android:layout_alignStart="@+id/sinhakbtn"
-            android:layout_alignTop="@+id/jonghapbtn"
-            android:onClick="goSelectFloor"
-            android:text="팔달관" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/jonghapbtn"
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="177dp"
-            android:layout_marginEnd="45dp"
-            android:text="종합관" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/sinhakbtn"
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/paldalbtn"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="28dp"
-            android:text="신학생회관" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="105dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:drawableEnd="@drawable/manager" />
 
-        <Button
-            android:id="@+id/yulgokbtn"
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:layout_alignLeft="@+id/jonghapbtn"
-            android:layout_alignStart="@+id/jonghapbtn"
-            android:layout_alignTop="@+id/sinhakbtn"
-            android:text="율곡관" />
-    </RelativeLayout>
+            <Button
+                android:id="@+id/paldalbtn"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_alignLeft="@+id/sinhakbtn"
+                android:layout_alignStart="@+id/sinhakbtn"
+                android:layout_alignTop="@+id/jonghapbtn"
+                android:text="팔달관" />
+
+            <Button
+                android:id="@+id/jonghapbtn"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:layout_toEndOf="@+id/paldalbtn"
+                android:text="종합관" />
+
+            <Button
+                android:id="@+id/sinhakbtn"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_above="@+id/button2"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="13dp"
+                android:layout_marginStart="51dp"
+                android:text="신학생회관" />
+
+            <Button
+                android:id="@+id/yulgokbtn"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_alignLeft="@+id/jonghapbtn"
+                android:layout_alignStart="@+id/jonghapbtn"
+                android:layout_alignTop="@+id/sinhakbtn"
+                android:text="율곡관" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

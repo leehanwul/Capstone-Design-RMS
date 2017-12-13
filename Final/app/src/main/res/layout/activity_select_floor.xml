@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinwoo.afinal.SelectFloorActivity"
+    tools:context="com.example.jinwoo.afinal.Pal_SelectFloorActivity"
     android:background="@drawable/background">
 
     <RelativeLayout
@@ -13,57 +13,61 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/floor_1"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="49dp"
-            android:drawableEnd="@drawable/floor1"
-            android:onClick="goPaldarF1"
-            android:text="1층"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="360dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/floor_3"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_above="@+id/floor_2"
-            android:layout_alignLeft="@+id/floor_2"
-            android:layout_alignStart="@+id/floor_2"
-            android:layout_marginBottom="30dp"
-            android:drawableEnd="@drawable/floor3"
-            android:text="3층"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="162dp" />
+            <ImageButton
+                android:id="@+id/floor_4"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="2"
+                android:src="@drawable/floor4"
+                android:text="4층"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="60dp" />
 
-        <Button
-            android:id="@+id/floor_4"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_above="@+id/floor_3"
-            android:layout_alignLeft="@+id/floor_3"
-            android:layout_alignStart="@+id/floor_3"
-            android:layout_marginBottom="30dp"
-            android:drawableEnd="@drawable/floor4"
-            android:text="4층"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="60dp" />
+            <ImageButton
+                android:id="@+id/floor_3"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="2"
+                android:src="@drawable/floor3"
+                android:text="3층"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="162dp" />
 
-        <Button
-            android:id="@+id/floor_2"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_above="@+id/floor_1"
-            android:layout_alignLeft="@+id/floor_1"
-            android:layout_alignStart="@+id/floor_1"
-            android:layout_marginBottom="30dp"
-            android:drawableEnd="@drawable/floor2"
-            android:text="2층"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="266dp" />
+            <ImageButton
+                android:id="@+id/floor_2"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="2"
+                android:src="@drawable/floor2"
+                android:text="2층"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <ImageButton
+                android:id="@+id/floor_1"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="49dp"
+                android:layout_weight="2"
+                android:onClick="goPaldarF1"
+                android:src="@drawable/floor1"
+                android:text="1층"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="360dp" />
+        </LinearLayout>
+
     </RelativeLayout>
 
 
